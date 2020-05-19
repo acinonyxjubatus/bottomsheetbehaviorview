@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BottomSheetBehaviourView">
+        <attr name="aflSkipCollapsed" format="boolean" />
+        <attr name="isHideable" format="boolean" />
+        <attr name="blackoutOnExpand" format="boolean" />
+        <attr name="showHeaderThumb" format="boolean" />
+        <attr name="peekHeightByHeader" format="boolean" />
+        <attr name="defaultHidden" format="boolean" />
+        <attr name="nestedScrollViewForContent" format="boolean" />
+        <attr name="isHeaderHideable" format="boolean" />
+        <!-- maximum expanded state height -->
+        <attr name="maxBottomSheetHeight" format="float" />
+        <!-- maximum collapsed state height -->
+        <attr name="peekHeight" format="integer" />
+        <attr name="headerLayoutID" format="reference" />
+        <attr name="contentLayoutID" format="reference" />
+        <attr name="footerLayoutID" format="reference" />
+        <attr name="collapseOnOutsideClick" format="boolean" />
+        <attr name="hideOnOutsideClick" format="boolean" />
+        <attr name="isDisabledSwipeDismiss" format="boolean" />
+    </declare-styleable>
+</resources>

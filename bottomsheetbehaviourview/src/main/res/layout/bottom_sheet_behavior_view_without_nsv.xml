@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andreyaleev.bottomsheet.NestedCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/flBlackout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#555"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:alpha="0.5"
+        android:alpha="0.0"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBottomSheet"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_height="500dp"
+        app:behavior_hideable="true"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <LinearLayout
+            android:id="@+id/llHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_height="100dp"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/vBottomSheetThumb"
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="2dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:background="@drawable/white_rounded_rectangle"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <LinearLayout
+                android:id="@+id/llHeaderContent"
+                android:gravity="center"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:background="00f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- header will go here -->
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/llFooter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llHeader"
+            tools:visibility="visible">
+
+            <!-- content will go here -->
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llFooter"
+            tools:layout_height="100dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:background="00f"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- footer will go here -->
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.andreyaleev.bottomsheet.NestedCoordinatorLayout>

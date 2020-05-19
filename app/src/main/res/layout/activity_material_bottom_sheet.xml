@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_100"
+    android:fitsSystemWindows="true">
+
+
+    <LinearLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/teal_300"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/button_expand"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="expand" />
+
+        <Button
+            android:id="@+id/button_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="collapse" />
+
+        <TextView
+            android:id="@+id/text_view_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="State"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+
+        <Button
+            android:id="@+id/buttonAddNew"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add bottom sheet programatically" />
+
+        <TextView
+            android:id="@+id/textViewState2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="State"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+
+
+        <Button
+            android:id="@+id/buttonAddNewConstructor"
+            android:layout_margin="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add bottom sheet programatically with View in constructor" />
+
+        <TextView
+            android:id="@+id/textViewState3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="State"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+
+    <com.andreyaleev.bottomsheet.BottomSheetBehaviourView
+        android:id="@+id/bottomSheetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:contentLayoutID="@layout/layout_material_bottomsheet_content"
+        app:maxBottomSheetHeight="0.9"
+        app:footerLayoutID="@layout/layout_material_bottomsheet_footer"
+        app:headerLayoutID="@layout/layout_material_bottomsheet_header" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

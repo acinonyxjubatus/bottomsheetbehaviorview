@@ -1,0 +1,3 @@
+rootProject.name='BottomSheetBehaviourView'
+include ':app'
+include ':bottomsheetbehaviourview'
