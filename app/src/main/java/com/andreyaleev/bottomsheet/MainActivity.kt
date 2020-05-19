@@ -25,8 +25,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_material_bottom_sheet)
 
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeButtonEnabled(true)
         title = "MaterialBottomSheetActivity"
 
         bottomSheetLayout = findViewById(R.id.bottomSheetLayout)
